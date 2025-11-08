@@ -1,0 +1,12 @@
+# Ignorar dependencias
+node_modules/
+club-faraday-frontend/node_modules/
+club-faraday-backend/node_modules/
+
+# Ignorar archivos de entorno
+.env
+.DS_Store
+
+# Ignorar directorios de build
+dist/
+build/
