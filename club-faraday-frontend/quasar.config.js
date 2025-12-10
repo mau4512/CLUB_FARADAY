@@ -38,6 +38,9 @@ export default defineConfig((/* ctx */) => {
       },
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
+      env: {
+        API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:3000/api',
+      },
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,

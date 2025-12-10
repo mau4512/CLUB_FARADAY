@@ -19,6 +19,27 @@
           <q-item-section>Usuarios</q-item-section>
         </q-item>
 
+        <q-item clickable v-ripple to="/admin/deportistas">
+          <q-item-section avatar>
+            <q-icon name="sports_handball" />
+          </q-item-section>
+          <q-item-section>Jugadores</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/admin/horarios">
+          <q-item-section avatar>
+            <q-icon name="schedule" />
+          </q-item-section>
+          <q-item-section>Horarios</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/admin/asignaciones">
+          <q-item-section avatar>
+            <q-icon name="assignment_ind" />
+          </q-item-section>
+          <q-item-section>Asignaciones</q-item-section>
+        </q-item>
+
         <!-- Puedes seguir agregando más rutas -->
       </q-list>
     </q-drawer>

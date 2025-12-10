@@ -1,10 +1,17 @@
 // backend/controllers/authController.js
-const Usuario = require('../models/usuario');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const Usuario = require('../models/usuario');
+
+const jwtSecret = process.env.JWT_SECRET;
 
 const login = async (req, res) => {
   const { correo, password } = req.body;
+
+  if (!jwtSecret) {
+    console.error('JWT_SECRET no está definido en el entorno');
+    return res.status(500).json({ mensaje: 'Configuración de seguridad incompleta' });
+  }
 
   try {
     // Buscar usuario por correo
@@ -27,7 +34,7 @@ const login = async (req, res) => {
         rol: usuario.rol,
         nombre: usuario.nombre
       },
-      process.env.JWT_SECRET || 'secreto_club_faraday',
+      jwtSecret,
       { expiresIn: '1d' }
     );
 

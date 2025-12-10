@@ -79,11 +79,8 @@ const handleLogin = async () => {
 
     $q.notify({ type: 'positive', message: `Bienvenido, ${usuario.nombre}` })
 
-    if (usuario.rol === 'admin') {
-      router.push('/admin')
-    } else {
-      router.push('/entrenador')
-    }
+    const destino = usuario.rol === 'admin' ? '/admin' : '/'
+    router.push(destino)
 
   } catch (error) {
     $q.notify({

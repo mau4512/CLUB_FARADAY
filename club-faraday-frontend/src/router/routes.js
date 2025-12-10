@@ -21,6 +21,18 @@ const routes = [
       {
         path: 'usuarios',
         component: () => import('pages/admin/UsuariosPage.vue') // futuro
+      },
+      {
+        path: 'deportistas',
+        component: () => import('pages/admin/DeportistasPage.vue')
+      },
+      {
+        path: 'horarios',
+        component: () => import('pages/admin/HorariosPage.vue')
+      },
+      {
+        path: 'asignaciones',
+        component: () => import('pages/admin/AsignacionesPage.vue')
       }
     ]
   },

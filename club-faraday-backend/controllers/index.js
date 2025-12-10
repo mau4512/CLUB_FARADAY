@@ -1,7 +1,5 @@
-// models/index.js
-const Usuario = require('./usuario');
-// Aquí más adelante importarás y relacionarás otros modelos
+const usuarioController = require('./usuario');
 
 module.exports = {
-  Usuario,
+  usuarioController,
 };
